@@ -46,4 +46,9 @@ public class CommonStepDef {
         driver.close();
     }
 
+    @Then("I assert something")
+    public void i_assert_something() {
+        Assert.assertTrue(true);
+    }
+
 }

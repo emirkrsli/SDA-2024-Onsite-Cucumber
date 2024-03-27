@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: Data Tables Feature
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 10.09 s <<< FAILURE! -- in Data Tables Feature
+Data Tables Feature.Data Tables Test -- Time elapsed: 10.04 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because the return value of "java.lang.ThreadLocal.get()" is null
+	at utilities.Driver.closeDriver(Driver.java:36)
+	at stepdefinitions.CommonStepDef.i_close_the_browser(CommonStepDef.java:46)
+	at ✽.I close the browser(file:///Users/emirkarsli/IdeaProjects/SDA-2024-Onsite-Cucumber/src/test/resources/features/dataTables.feature:8)
+

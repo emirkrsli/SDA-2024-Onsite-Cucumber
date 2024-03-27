@@ -1,0 +1,14 @@
+Before the scenario: Setting up the environment...
+Scenario id: b76df651-da70-4842-8b03-13b8b4dbbd08
+Scenario name: Data Tables Test
+[amazon, google, ebay]
+amazon
+google
+ebay
+After the scenario, cleaning up the test environment
+Scenario status: FAILED
+Scenario isFailed?: true
+Mar 27, 2024 10:04:43 AM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
+WARNING: Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event): operation timed out
+Mar 27, 2024 10:04:45 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123

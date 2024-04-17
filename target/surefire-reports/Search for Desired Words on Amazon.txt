@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: Search for Desired Words on Amazon
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 38.33 s <<< FAILURE! -- in Search for Desired Words on Amazon
+Search for Desired Words on Amazon.Search for Keywords on Ebay #1 -- Time elapsed: 20.00 s <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.EbayStepDef.the_user_verifies_that_the_search_results_contain(EbayStepDef.java:26)
+	at ✽.the user verifies that the search results contain "value"(file:///Users/emirkarsli/IdeaProjects/SDA-2024-Onsite-Cucumber/src/test/resources/features/scenariooutlinetask.feature:8)
+
+Search for Desired Words on Amazon.Search for Keywords on Ebay #2 -- Time elapsed: 15.08 s <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.EbayStepDef.the_user_verifies_that_the_search_results_contain(EbayStepDef.java:26)
+	at ✽.the user verifies that the search results contain "value"(file:///Users/emirkarsli/IdeaProjects/SDA-2024-Onsite-Cucumber/src/test/resources/features/scenariooutlinetask.feature:8)
+

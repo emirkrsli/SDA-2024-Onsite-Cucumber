@@ -34,6 +34,17 @@
             <artifactId>selenium-java</artifactId>
             <version>4.18.1</version>
         </dependency>
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -74,11 +85,11 @@
                 <version>3.1.2</version>
                 <configuration>
                     <parallel>none</parallel>
-                    <threadCount>10</threadCount>
-                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                    <threadCount>4</threadCount>
                     <includes>
                         <include>**/runners/*Runner*.java</include>
                     </includes>
+                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
                 </configuration>
             </plugin>
         </plugins>

@@ -1,6 +1,6 @@
 Feature: scenario outline feature
 
-  Scenario Outline:
+  Scenario Outline: scenario outline test
     Given I open the browser
     And I am on the google homepage
     When I search for "<searchInput>" on google

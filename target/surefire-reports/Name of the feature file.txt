@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: Data Tables Feature
+Test set: Name of the feature file
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.728 s -- in Data Tables Feature
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.10 s -- in Name of the feature file

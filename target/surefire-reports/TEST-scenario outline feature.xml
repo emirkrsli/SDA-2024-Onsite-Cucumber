@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Data Tables Feature" time="3.728" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="scenario outline feature" time="12.49" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -59,26 +59,41 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="Data Tables Test" classname="Data Tables Feature" time="3.728">
+  <testcase name="scenario outline test #1" classname="scenario outline feature" time="7.21">
     <system-out><![CDATA[
-Scenario: Data Tables Test                &amp#27;[90m# src/test/resources/features/dataTables.feature:3&amp#27;[0m
+Scenario Outline: scenario outline test   &amp#27;[90m# src/test/resources/features/scenariooutline.feature:11&amp#27;[0m
 Before the scenario: Setting up the environment...
-Scenario id: 02da37aa-2a47-49bf-ab5e-5971c0238e76
-Scenario name: Data Tables Test
-[amazon, google, ebay]
-amazon
-google
-ebay
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI search for String on google&amp#27;[0m      &amp#27;[90m# stepdefinitions.DataTablesStepDef.i_search_for_string_on_google(java.util.List<java.util.List<java.lang.String>>)&amp#27;[0m
-    | amazon | google | ebay |
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see String on the results&amp#27;[0m &amp#27;[90m# stepdefinitions.DataTablesStepDef.i_should_see_string_on_the_results(io.cucumber.datatable.DataTable)&amp#27;[0m
-    | amazon |
+Scenario id: cea3f3ce-8629-450a-b8c6-8bd7fea5a81b
+Scenario name: scenario outline test
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI open the browser&amp#27;[0m                &amp#27;[90m# stepdefinitions.CommonStepDef.i_open_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the google homepage&amp#27;[0m         &amp#27;[90m# stepdefinitions.CommonStepDef.i_am_on_the_google_homepage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI search for &amp#27;[0m&amp#27;[32m&amp#27;[1m"emir"&amp#27;[0m&amp#27;[32m on google&amp#27;[0m      &amp#27;[90m# stepdefinitions.CommonStepDef.i_search_for_on_google(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see &amp#27;[0m&amp#27;[32m&amp#27;[1m"emir"&amp#27;[0m&amp#27;[32m on the results&amp#27;[0m &amp#27;[90m# stepdefinitions.CommonStepDef.i_should_see_on_the_results(java.lang.String)&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI close the browser&amp#27;[0m                &amp#27;[90m# stepdefinitions.CommonStepDef.i_close_the_browser()&amp#27;[0m
 After the scenario, cleaning up the test environment
 Scenario status: PASSED
 Scenario isFailed?: false
 ]]></system-out>
     <system-err><![CDATA[Apr 18, 2024 12:01:02 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
+]]></system-err>
+  </testcase>
+  <testcase name="scenario outline test #2" classname="scenario outline feature" time="5.28">
+    <system-out><![CDATA[
+Scenario Outline: scenario outline test       &amp#27;[90m# src/test/resources/features/scenariooutline.feature:12&amp#27;[0m
+Before the scenario: Setting up the environment...
+Scenario id: 8369e7c4-41b6-4255-9d40-34b21802c6a9
+Scenario name: scenario outline test
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI open the browser&amp#27;[0m                    &amp#27;[90m# stepdefinitions.CommonStepDef.i_open_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am on the google homepage&amp#27;[0m             &amp#27;[90m# stepdefinitions.CommonStepDef.i_am_on_the_google_homepage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI search for &amp#27;[0m&amp#27;[32m&amp#27;[1m"abdullah"&amp#27;[0m&amp#27;[32m on google&amp#27;[0m      &amp#27;[90m# stepdefinitions.CommonStepDef.i_search_for_on_google(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see &amp#27;[0m&amp#27;[32m&amp#27;[1m"abdullah"&amp#27;[0m&amp#27;[32m on the results&amp#27;[0m &amp#27;[90m# stepdefinitions.CommonStepDef.i_should_see_on_the_results(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI close the browser&amp#27;[0m                    &amp#27;[90m# stepdefinitions.CommonStepDef.i_close_the_browser()&amp#27;[0m
+After the scenario, cleaning up the test environment
+Scenario status: PASSED
+Scenario isFailed?: false
+]]></system-out>
+    <system-err><![CDATA[Apr 18, 2024 12:01:07 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
 ]]></system-err>
   </testcase>

@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.*;
+import utilities.Driver;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ public class DataTablesStepDef {
         // Double, Byte, Short, Long, BigInteger or BigDecimal.
         //
         // For other transformations you can register a DataTableType.
+        Driver.getDriver();
         for(int i = 0; i<dataTable.size(); i++){
             System.out.println(dataTable.get(i));
             for (int j= 0; j < dataTable.get(i).size(); j++){

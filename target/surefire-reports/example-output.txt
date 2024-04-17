@@ -1,0 +1,15 @@
+
+@mytag @secondtag
+Scenario: example scenario          [90m# src/test/resources/features/example.feature:4[0m
+Before the scenario: Setting up the environment...
+Scenario id: 06c169e7-1d1f-42eb-9e0f-37b0ab96a09a
+Scenario name: example scenario
+Apr 18, 2024 12:01:02 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
+  [32mGiven [0m[32mI open the browser[0m          [90m# stepdefinitions.CommonStepDef.i_open_the_browser()[0m
+  [32mGiven [0m[32mI am on the google homepage[0m [90m# stepdefinitions.CommonStepDef.i_am_on_the_google_homepage()[0m
+  [32mGiven [0m[32mI close the browser[0m         [90m# stepdefinitions.CommonStepDef.i_close_the_browser()[0m
+  [32mThen [0m[32mI assert something[0m           [90m# stepdefinitions.CommonStepDef.i_assert_something()[0m
+After the scenario, cleaning up the test environment
+Scenario status: PASSED
+Scenario isFailed?: false

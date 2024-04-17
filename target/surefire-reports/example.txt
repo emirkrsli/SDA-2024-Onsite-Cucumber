@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: Data Tables Feature
+Test set: example
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.728 s -- in Data Tables Feature
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.984 s -- in example

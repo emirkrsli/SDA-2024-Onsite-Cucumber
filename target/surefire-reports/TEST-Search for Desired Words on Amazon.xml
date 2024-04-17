@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Data Tables Feature" time="3.728" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Search for Desired Words on Amazon" time="38.327" tests="3" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -59,27 +59,93 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="Data Tables Test" classname="Data Tables Feature" time="3.728">
+  <testcase name="Search for Keywords on Ebay #1" classname="Search for Desired Words on Amazon" time="19.997">
+    <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.EbayStepDef.the_user_verifies_that_the_search_results_contain(EbayStepDef.java:26)
+	at ✽.the user verifies that the search results contain "value"(file:///Users/emirkarsli/IdeaProjects/SDA-2024-Onsite-Cucumber/src/test/resources/features/scenariooutlinetask.feature:8)
+]]></failure>
     <system-out><![CDATA[
-Scenario: Data Tables Test                &amp#27;[90m# src/test/resources/features/dataTables.feature:3&amp#27;[0m
+Scenario Outline: Search for Keywords on Ebay                    &amp#27;[90m# src/test/resources/features/scenariooutlinetask.feature:12&amp#27;[0m
 Before the scenario: Setting up the environment...
-Scenario id: 02da37aa-2a47-49bf-ab5e-5971c0238e76
-Scenario name: Data Tables Test
-[amazon, google, ebay]
-amazon
-google
-ebay
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI search for String on google&amp#27;[0m      &amp#27;[90m# stepdefinitions.DataTablesStepDef.i_search_for_string_on_google(java.util.List<java.util.List<java.lang.String>>)&amp#27;[0m
-    | amazon | google | ebay |
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see String on the results&amp#27;[0m &amp#27;[90m# stepdefinitions.DataTablesStepDef.i_should_see_string_on_the_results(io.cucumber.datatable.DataTable)&amp#27;[0m
-    | amazon |
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI close the browser&amp#27;[0m                &amp#27;[90m# stepdefinitions.CommonStepDef.i_close_the_browser()&amp#27;[0m
+Scenario id: 81b9a7d0-1209-47b5-b236-588eb21a0b04
+Scenario name: Search for Keywords on Ebay
+  &amp#27;[32m* &amp#27;[0m&amp#27;[32mI open the browser&amp#27;[0m                                           &amp#27;[90m# stepdefinitions.CommonStepDef.i_open_the_browser()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user navigates to the Ebay homepage&amp#27;[0m                  &amp#27;[90m# stepdefinitions.EbayStepDef.the_user_navigates_to_the_amazon_homepage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user searches for &amp#27;[0m&amp#27;[32m&amp#27;[1m"mac"&amp#27;[0m                               &amp#27;[90m# stepdefinitions.EbayStepDef.the_user_searches_for(java.lang.String)&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mthe user verifies that the search results contain &amp#27;[0m&amp#27;[31m&amp#27;[1m"value"&amp#27;[0m &amp#27;[90m# stepdefinitions.EbayStepDef.the_user_verifies_that_the_search_results_contain(java.lang.String)&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.EbayStepDef.the_user_verifies_that_the_search_results_contain(EbayStepDef.java:26)
+	at ✽.the user verifies that the search results contain "value"(file:///Users/emirkarsli/IdeaProjects/SDA-2024-Onsite-Cucumber/src/test/resources/features/scenariooutlinetask.feature:8)
+&amp#27;[0m
+  &amp#27;[36m* &amp#27;[0m&amp#27;[36mI close the browser&amp#27;[0m                                          &amp#27;[90m# stepdefinitions.CommonStepDef.i_close_the_browser()&amp#27;[0m
 After the scenario, cleaning up the test environment
-Scenario status: PASSED
-Scenario isFailed?: false
+Scenario status: FAILED
+Scenario isFailed?: true
+
+    Embedding FailedScreenshot [image/png 719330 bytes]
+
 ]]></system-out>
     <system-err><![CDATA[Apr 18, 2024 12:01:02 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
 ]]></system-err>
+  </testcase>
+  <testcase name="Search for Keywords on Ebay #2" classname="Search for Desired Words on Amazon" time="15.083">
+    <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.EbayStepDef.the_user_verifies_that_the_search_results_contain(EbayStepDef.java:26)
+	at ✽.the user verifies that the search results contain "value"(file:///Users/emirkarsli/IdeaProjects/SDA-2024-Onsite-Cucumber/src/test/resources/features/scenariooutlinetask.feature:8)
+]]></failure>
+    <system-out><![CDATA[
+Scenario Outline: Search for Keywords on Ebay                    &amp#27;[90m# src/test/resources/features/scenariooutlinetask.feature:13&amp#27;[0m
+Before the scenario: Setting up the environment...
+Scenario id: b4a71563-92ca-42ec-a22e-10976e179e43
+Scenario name: Search for Keywords on Ebay
+  &amp#27;[32m* &amp#27;[0m&amp#27;[32mI open the browser&amp#27;[0m                                           &amp#27;[90m# stepdefinitions.CommonStepDef.i_open_the_browser()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user navigates to the Ebay homepage&amp#27;[0m                  &amp#27;[90m# stepdefinitions.EbayStepDef.the_user_navigates_to_the_amazon_homepage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user searches for &amp#27;[0m&amp#27;[32m&amp#27;[1m"Windows"&amp#27;[0m                           &amp#27;[90m# stepdefinitions.EbayStepDef.the_user_searches_for(java.lang.String)&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mthe user verifies that the search results contain &amp#27;[0m&amp#27;[31m&amp#27;[1m"value"&amp#27;[0m &amp#27;[90m# stepdefinitions.EbayStepDef.the_user_verifies_that_the_search_results_contain(java.lang.String)&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.EbayStepDef.the_user_verifies_that_the_search_results_contain(EbayStepDef.java:26)
+	at ✽.the user verifies that the search results contain "value"(file:///Users/emirkarsli/IdeaProjects/SDA-2024-Onsite-Cucumber/src/test/resources/features/scenariooutlinetask.feature:8)
+&amp#27;[0m
+  &amp#27;[36m* &amp#27;[0m&amp#27;[36mI close the browser&amp#27;[0m                                          &amp#27;[90m# stepdefinitions.CommonStepDef.i_close_the_browser()&amp#27;[0m
+After the scenario, cleaning up the test environment
+Scenario status: FAILED
+Scenario isFailed?: true
+
+    Embedding FailedScreenshot [image/png 1635684 bytes]
+
+]]></system-out>
+  </testcase>
+  <testcase name="Search for Keywords on Ebay #3" classname="Search for Desired Words on Amazon" time="3.247">
+    <system-out><![CDATA[
+Scenario Outline: Search for Keywords on Ebay                    &amp#27;[90m# src/test/resources/features/scenariooutlinetask.feature:14&amp#27;[0m
+Before the scenario: Setting up the environment...
+Scenario id: 8e0bc091-02e0-48c2-a352-8acb7936ae90
+Scenario name: Search for Keywords on Ebay
+  &amp#27;[32m* &amp#27;[0m&amp#27;[32mI open the browser&amp#27;[0m                                           &amp#27;[90m# stepdefinitions.CommonStepDef.i_open_the_browser()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user navigates to the Ebay homepage&amp#27;[0m                  &amp#27;[90m# stepdefinitions.EbayStepDef.the_user_navigates_to_the_amazon_homepage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user searches for &amp#27;[0m&amp#27;[32m&amp#27;[1m"linux"&amp#27;[0m                             &amp#27;[90m# stepdefinitions.EbayStepDef.the_user_searches_for(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe user verifies that the search results contain &amp#27;[0m&amp#27;[32m&amp#27;[1m"value"&amp#27;[0m &amp#27;[90m# stepdefinitions.EbayStepDef.the_user_verifies_that_the_search_results_contain(java.lang.String)&amp#27;[0m
+  &amp#27;[32m* &amp#27;[0m&amp#27;[32mI close the browser&amp#27;[0m                                          &amp#27;[90m# stepdefinitions.CommonStepDef.i_close_the_browser()&amp#27;[0m
+After the scenario, cleaning up the test environment
+Scenario status: PASSED
+Scenario isFailed?: false
+]]></system-out>
   </testcase>
 </testsuite>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Data Tables Feature" time="3.728" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="example" time="5.984" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -59,21 +59,17 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="Data Tables Test" classname="Data Tables Feature" time="3.728">
+  <testcase name="example scenario" classname="example" time="5.984">
     <system-out><![CDATA[
-Scenario: Data Tables Test                &amp#27;[90m# src/test/resources/features/dataTables.feature:3&amp#27;[0m
+@mytag @secondtag
+Scenario: example scenario          &amp#27;[90m# src/test/resources/features/example.feature:4&amp#27;[0m
 Before the scenario: Setting up the environment...
-Scenario id: 02da37aa-2a47-49bf-ab5e-5971c0238e76
-Scenario name: Data Tables Test
-[amazon, google, ebay]
-amazon
-google
-ebay
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI search for String on google&amp#27;[0m      &amp#27;[90m# stepdefinitions.DataTablesStepDef.i_search_for_string_on_google(java.util.List<java.util.List<java.lang.String>>)&amp#27;[0m
-    | amazon | google | ebay |
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see String on the results&amp#27;[0m &amp#27;[90m# stepdefinitions.DataTablesStepDef.i_should_see_string_on_the_results(io.cucumber.datatable.DataTable)&amp#27;[0m
-    | amazon |
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI close the browser&amp#27;[0m                &amp#27;[90m# stepdefinitions.CommonStepDef.i_close_the_browser()&amp#27;[0m
+Scenario id: 06c169e7-1d1f-42eb-9e0f-37b0ab96a09a
+Scenario name: example scenario
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI open the browser&amp#27;[0m          &amp#27;[90m# stepdefinitions.CommonStepDef.i_open_the_browser()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the google homepage&amp#27;[0m &amp#27;[90m# stepdefinitions.CommonStepDef.i_am_on_the_google_homepage()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI close the browser&amp#27;[0m         &amp#27;[90m# stepdefinitions.CommonStepDef.i_close_the_browser()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI assert something&amp#27;[0m           &amp#27;[90m# stepdefinitions.CommonStepDef.i_assert_something()&amp#27;[0m
 After the scenario, cleaning up the test environment
 Scenario status: PASSED
 Scenario isFailed?: false

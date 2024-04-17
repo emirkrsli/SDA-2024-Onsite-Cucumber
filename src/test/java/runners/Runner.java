@@ -8,11 +8,14 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         glue = "stepdefinitions",
-        features = "src/test/resources/features/dataTables.feature",
+        features = "src/test/resources/features",
         plugin = {
                 "html:cucumber-reports/html/report.html",
-                "json:cucumber-reports/json/report.json"
+                "json:cucumber-reports/json/report.json",
+                "pretty",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
+        monochrome = false,
         dryRun = false
 )
 public class Runner {

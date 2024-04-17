@@ -50,4 +50,8 @@ public class CommonStepDef {
         Assert.assertTrue(true);
     }
 
+    @Then("I fail the test")
+    public void iFailTheTest() {
+        Assert.fail();
+    }
 }

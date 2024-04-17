@@ -6,3 +6,4 @@ Feature: Data Tables Feature
     Then I should see String on the results
     |amazon|
     Then I close the browser
+    Then I fail the test

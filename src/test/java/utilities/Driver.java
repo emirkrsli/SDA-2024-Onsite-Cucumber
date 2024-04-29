@@ -17,7 +17,7 @@ public class Driver {
         if (driver.get() == null){
             switch (ConfigReader.getProperty("browser")){
                 case "chrome":
-                    driver.set(new ChromeDriver(new ChromeOptions().addArguments("--headless")));
+                    driver.set(new ChromeDriver());
                     break;
                 case "ie":
                     driver.set(new InternetExplorerDriver());
